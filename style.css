@@ -1,0 +1,133 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+:root {
+	--text-color: #179498;
+	--background-color: #fff;
+	--banner-color: #f3f3f340;
+}
+
+.main {
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+}
+
+.aside {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	width: 40%;
+	height: 100%;
+	background-image: url("./img/background.jpg");
+	background-size: cover;
+}
+
+.title {
+	width: 100%;
+	text-align: center;
+	font-size: 3rem;
+	color: white;
+	background-color: var(--banner-color);
+	position: relative;
+	top: 20vh;
+	padding: 15px;
+}
+
+.hero {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	background-color: var(--background-color);
+}
+
+.text {
+	width: 100%;
+	font-size: 1.3rem;
+	margin: 20px 0;
+	padding: 0 50px;
+}
+
+.formSection {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	box-shadow: #17949820 0px 0px 10px;
+	padding: 20px 50px;
+}
+
+.formSection fieldset {
+	border: none;
+	font-size: 1.5rem;
+	padding: 0;
+	margin: 20px 0;
+}
+
+.inputSection {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+	align-items: center;
+}
+
+.items {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.items label {
+	font-size: 1rem;
+	color: var(--text-color);
+	position: relative;
+	top: 10px;
+	left: 20px;
+	background-color: var(--background-color);
+	padding: 0 10px;
+}
+
+.items input {
+	height: 40px;
+	border: 1px solid var(--text-color);
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.formButton {
+	border: 1px solid var(--text-color);
+	border-radius: 10px;
+	padding: 10px 30px;
+	background-color: var(--text-color);
+	color: #fff;
+	margin: 20px 50px;
+	cursor: pointer;
+}
+
+.logInButton {
+	margin: 20px 50px;
+}
+
+.logInButton a {
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+	.aside {
+		display: none;
+	}
+	.main {
+		width: 100%;
+	}
+	.hero {
+		width: 100%;
+	}
+	.formSection {
+		width: 100%;
+	}
+}
